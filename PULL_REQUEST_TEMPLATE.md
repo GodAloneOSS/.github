@@ -12,7 +12,7 @@ How was this tested?
 
 ## Screenshots
 
-(if applicable)
+_(if applicable)_
 
 ## Related issue
 

@@ -1,0 +1,54 @@
+<!--
+  Org-wide label definitions. Apply with the GitHub CLI once repos exist:
+    gh label create -R GodAlone/<repo> -f labels.yml
+  (requires converting this to the gh-label-sync tool's expected format,
+  or apply manually via Settings → Labels in each repo — there is no
+  built-in "org-wide labels" feature in GitHub, so these need to be applied
+  per repo, either by script or by hand.)
+-->
+
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+- name: enhancement
+  color: a2eeef
+  description: New feature or request
+- name: documentation
+  color: 0075ca
+  description: Improvements or additions to documentation
+- name: "good first issue"
+  color: 7057ff
+  description: Good for newcomers
+- name: "help wanted"
+  color: 008672
+  description: Extra attention is needed
+- name: question
+  color: d876e3
+  description: Further information is requested
+- name: accessibility
+  color: fbca04
+  description: Related to accessibility (a11y)
+- name: translation
+  color: c5def5
+  description: Related to translation / i18n
+- name: quran
+  color: 5319e7
+  description: Related to Quran text, translation, or audio content
+- name: audio
+  color: bfd4f2
+  description: Related to audio playback, recitation, or TTS
+- name: mobile
+  color: fef2c0
+  description: Related to mobile apps or mobile web
+- name: web
+  color: c2e0c6
+  description: Related to a website
+- name: calculator
+  color: f9d0c4
+  description: Related to Zakat/Salat/Ramadan/19/Inheritance calculators
+- name: security
+  color: ee0701
+  description: Security-related issue
+- name: beginner
+  color: 7057ff
+  description: Suitable for a first-time contributor
