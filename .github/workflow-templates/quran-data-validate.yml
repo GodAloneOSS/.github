@@ -1,0 +1,28 @@
+name: Validate Quran Data
+
+# Strict on purpose — bad data here would propagate to every product that
+# consumes this repo. Runs on every PR that touches quran/, translations/,
+# audio/, or metadata/.
+
+on:
+  pull_request:
+    paths:
+      - "quran/**"
+      - "translations/**"
+      - "audio/**"
+      - "metadata/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install validation dependencies
+        run: npm ci
+      - name: Validate schema (sura/ayah numbering, required metadata fields)
+        run: npm run validate:quran-data
+      - name: Check attribution present for new sources
+        run: npm run validate:attributions
